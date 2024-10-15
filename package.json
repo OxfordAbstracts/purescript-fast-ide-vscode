@@ -1,7 +1,7 @@
 {
   "name": "purescript-fast-ide-vscode",
   "displayName": "Purescript fast IDE",
-  "description": "A fast IDE for purecript, using inbuilt purescript LSP",
+  "description": "A fast IDE for purescript, using inbuilt purescript LSP",
   "publisher": "OxfordAbstracts",
   "version": "0.0.4",
   "repository": {
@@ -47,38 +47,38 @@
     ],
     "commands": [
       {
-        "command": "purecript.build",
+        "command": "purescript.build",
         "title": "Purescript: Build"
       },
       {
-        "command": "purecript.clear-cache",
+        "command": "purescript.clear-cache",
         "title": "Purescript: clear all caches"
       },
       {
-        "command": "purecript.clear-cache:rebuild",
+        "command": "purescript.clear-cache:rebuild",
         "title": "Purescript: clear rebuild cache"
       },
       {
-        "command": "purecript.clear-cache:export",
+        "command": "purescript.clear-cache:export",
         "title": "Purescript: clear export cache"
       },
       {
-        "command": "purecript.delete-output",
+        "command": "purescript.delete-output",
         "title": "Purescript: Delete output"
       },
       {
-        "command": "purecript.index-fast",
+        "command": "purescript.index-fast",
         "title": "Purescript: Index existing externs"
       },
       {
-        "command": "purecript.index-full",
+        "command": "purescript.index-full",
         "title": "Purescript: Index externs with full rebuild"
       }
     ],
     "configuration": {
       "title": "Purescript LSP Client",
       "properties": {
-        "purecript.formatter": {
+        "purescript.formatter": {
           "scope": "resource",
           "type": "string",
           "enum": [
@@ -96,13 +96,13 @@
           "default": "purs-tidy",
           "description": "Tool to use to for formatting. Must be installed and on PATH (or npm installed with addNpmPath set)"
         },
-        "purecript.outputPath": {
+        "purescript.outputPath": {
           "scope": "resource",
           "type": "string",
           "default": "./output",
           "description": "Path to purs output directory"
         },
-        "purecript.globs": {
+        "purescript.globs": {
           "scope": "resource",
           "type": "array",
           "default": [
@@ -111,7 +111,7 @@
           ],
           "description": "Source file globs"
         },
-        "purecript.logLevel": {
+        "purescript.logLevel": {
           "scope": "resource",
           "type": "string",
           "enum": [
@@ -125,24 +125,24 @@
           ],
           "default": "warning"
         },
-        "purecript.traceValue": {
+        "purescript.traceValue": {
           "scope": "resource",
           "type": "traceValue",
           "default": null
         },
-        "purecript.maxTypeLength": {
+        "purescript.maxTypeLength": {
           "scope": "resource",
           "type": "number",
           "default": 100,
           "description": "Max length of types in autocomplete"
         },
-        "purecript.maxCompletions": {
+        "purescript.maxCompletions": {
           "scope": "resource",
           "type": "number",
           "default": 50,
           "description": "Max number of completions to show"
         },
-        "purecript.maxFilesInCache": {
+        "purescript.maxFilesInCache": {
           "scope": "resource",
           "type": "number",
           "default": 16,
