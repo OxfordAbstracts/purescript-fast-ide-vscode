@@ -3,158 +3,158 @@
   "displayName": "purescript-fast-ide-vscode",
   "description": "A fast vscode ide for purecript, using inbuilt purescript LSP",
   "publisher": "OxfordAbstracts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
-		"type": "git",
-		"url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode.git"
-	},
+    "type": "git",
+    "url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode.git"
+  },
   "bugs": {
-		"url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode/issues"
-	},
-	"homepage": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode",
+    "url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode/issues"
+  },
+  "homepage": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode",
   "engines": {
     "vscode": "^1.94.0"
   },
   "keywords": [
-		"purescript",
-		"purs",
-		"ide",
-		"lsp"
-	],
+    "purescript",
+    "purs",
+    "ide",
+    "lsp"
+  ],
   "activationEvents": [
-		"onLanguage:purescript",
-		"workspaceContains:src/**/*.purs",
-		"workspaceContains:spago.yaml",
-		"workspaceContains:spago.dhall"
-	],
+    "onLanguage:purescript",
+    "workspaceContains:src/**/*.purs",
+    "workspaceContains:spago.yaml",
+    "workspaceContains:spago.dhall"
+  ],
   "categories": [
     "Programming Languages"
   ],
   "main": "./out/extension.js",
-"contributes": {
-		"languages": [
-			{
-				"id": "purescript",
-				"aliases": [
-					"Purescript",
-					"purescript"
-				],
-				"extensions": [
-					".purs"
-				]
-			}
-		],
-		"commands": [
-			{
-				"command": "purecript.build",
-				"title": "Purescript: Build"
-			},
-			{
-				"command": "purecript.clear-cache",
-				"title": "Purescript: clear all caches"
-			},
-			{
-				"command": "purecript.clear-cache:rebuild",
-				"title": "Purescript: clear rebuild cache"
-			},
-			{
-				"command": "purecript.clear-cache:export",
-				"title": "Purescript: clear export cache"
-			},
-			{
-				"command": "purecript.delete-output",
-				"title": "Purescript: Delete output"
-			},
-			{
-				"command": "purecript.index-fast",
-				"title": "Purescript: Index existing externs"
-			},
-			{
-				"command": "purecript.index-full",
-				"title": "Purescript: Index externs with full rebuild"
-			}
-		],
-		"configuration": {
-			"title": "Purescript LSP Client",
-			"properties": {
-				"purecript.formatter": {
-					"scope": "resource",
-					"type": "string",
-					"enum": [
-						"none",
-						"purty",
-						"purs-tidy",
-						"pose"
-					],
-					"markdownEnumDescriptions": [
-						"No formatting provision",
-						"Use purty. Must be installed - [instructions](https://gitlab.com/joneshf/purty#npm)",
-						"Use purs-tidy. Must be installed - [instructions](https://github.com/natefaubion/purescript-tidy)",
-						"Use pose (prettier plugin). Must be installed - [instructions](https://pose.rowtype.yoga/)"
-					],
-					"default": "purs-tidy",
-					"description": "Tool to use to for formatting. Must be installed and on PATH (or npm installed with addNpmPath set)"
-				},
-				"purecript.outputPath": {
-					"scope": "resource",
-					"type": "string",
-					"default": "./output",
-					"description": "Path to purs output directory"
-				},
-				"purecript.globs": {
-					"scope": "resource",
-					"type": "array",
-					"default": [
-						"src/**/*.purs",
-						".spago/**/*.purs"
-					],
-					"description": "Source file globs"
-				},
-				"purecript.logLevel": {
-					"scope": "resource",
-					"type": "string",
-					"enum": [
-						"all",
-						"debug",
-						"perf",
-						"info",
-						"warning",
-						"error",
-						"none"
-					],
-					"default": "warning"
-				},
-				"purecript.traceValue": {
-					"scope": "resource",
-					"type": "traceValue",
-					"default": null
-				},
-				"purecript.maxTypeLength": {
-					"scope": "resource",
-					"type": "number",
-					"default": 100,
-					"description": "Max length of types in autocomplete"
-				},
-				"purecript.maxCompletions": {
-					"scope": "resource",
-					"type": "number",
-					"default": 50,
-					"description": "Max number of completions to show"
-				},
-				"purecript.maxFilesInCache": {
-					"scope": "resource",
-					"type": "number",
-					"default": 16,
-					"description": "Max number of files to keep in memory cache"
-				}
-			}
-		},
-		"breakpoints": [
-			{
-				"language": "purescript"
-			}
-		]
-	},
+  "contributes": {
+    "languages": [
+      {
+        "id": "purescript",
+        "aliases": [
+          "Purescript",
+          "purescript"
+        ],
+        "extensions": [
+          ".purs"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "purecript.build",
+        "title": "Purescript: Build"
+      },
+      {
+        "command": "purecript.clear-cache",
+        "title": "Purescript: clear all caches"
+      },
+      {
+        "command": "purecript.clear-cache:rebuild",
+        "title": "Purescript: clear rebuild cache"
+      },
+      {
+        "command": "purecript.clear-cache:export",
+        "title": "Purescript: clear export cache"
+      },
+      {
+        "command": "purecript.delete-output",
+        "title": "Purescript: Delete output"
+      },
+      {
+        "command": "purecript.index-fast",
+        "title": "Purescript: Index existing externs"
+      },
+      {
+        "command": "purecript.index-full",
+        "title": "Purescript: Index externs with full rebuild"
+      }
+    ],
+    "configuration": {
+      "title": "Purescript LSP Client",
+      "properties": {
+        "purecript.formatter": {
+          "scope": "resource",
+          "type": "string",
+          "enum": [
+            "none",
+            "purty",
+            "purs-tidy",
+            "pose"
+          ],
+          "markdownEnumDescriptions": [
+            "No formatting provision",
+            "Use purty. Must be installed - [instructions](https://gitlab.com/joneshf/purty#npm)",
+            "Use purs-tidy. Must be installed - [instructions](https://github.com/natefaubion/purescript-tidy)",
+            "Use pose (prettier plugin). Must be installed - [instructions](https://pose.rowtype.yoga/)"
+          ],
+          "default": "purs-tidy",
+          "description": "Tool to use to for formatting. Must be installed and on PATH (or npm installed with addNpmPath set)"
+        },
+        "purecript.outputPath": {
+          "scope": "resource",
+          "type": "string",
+          "default": "./output",
+          "description": "Path to purs output directory"
+        },
+        "purecript.globs": {
+          "scope": "resource",
+          "type": "array",
+          "default": [
+            "src/**/*.purs",
+            ".spago/**/*.purs"
+          ],
+          "description": "Source file globs"
+        },
+        "purecript.logLevel": {
+          "scope": "resource",
+          "type": "string",
+          "enum": [
+            "all",
+            "debug",
+            "perf",
+            "info",
+            "warning",
+            "error",
+            "none"
+          ],
+          "default": "warning"
+        },
+        "purecript.traceValue": {
+          "scope": "resource",
+          "type": "traceValue",
+          "default": null
+        },
+        "purecript.maxTypeLength": {
+          "scope": "resource",
+          "type": "number",
+          "default": 100,
+          "description": "Max length of types in autocomplete"
+        },
+        "purecript.maxCompletions": {
+          "scope": "resource",
+          "type": "number",
+          "default": 50,
+          "description": "Max number of completions to show"
+        },
+        "purecript.maxFilesInCache": {
+          "scope": "resource",
+          "type": "number",
+          "default": 16,
+          "description": "Max number of files to keep in memory cache"
+        }
+      }
+    },
+    "breakpoints": [
+      {
+        "language": "purescript"
+      }
+    ]
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
