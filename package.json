@@ -3,6 +3,10 @@
   "displayName": "purescript-fast-ide-vscode",
   "description": "A fast vscode ide for purecript, using inbuilt purescript LSP",
   "version": "0.0.1",
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode.git"
+	},
   "engines": {
     "vscode": "^1.94.0"
   },
