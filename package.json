@@ -7,22 +7,153 @@
 		"type": "git",
 		"url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode.git"
 	},
+  "bugs": {
+		"url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode/issues"
+	},
+	"homepage": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode",
   "engines": {
     "vscode": "^1.94.0"
   },
+  "keywords": [
+		"purescript",
+		"purs",
+		"ide",
+		"lsp"
+	],
+  "activationEvents": [
+		"onLanguage:purescript",
+		"workspaceContains:src/**/*.purs",
+		"workspaceContains:spago.yaml",
+		"workspaceContains:spago.dhall"
+	],
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
-  "activationEvents": [],
   "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "purescript-fast-ide-vscode.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
+"contributes": {
+		"languages": [
+			{
+				"id": "purescript",
+				"aliases": [
+					"Purescript",
+					"purescript"
+				],
+				"extensions": [
+					".purs"
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "purs-lsp-client.build",
+				"title": "Purescript: Build"
+			},
+			{
+				"command": "purs-lsp-client.clear-cache",
+				"title": "Purescript: clear all caches"
+			},
+			{
+				"command": "purs-lsp-client.clear-cache:rebuild",
+				"title": "Purescript: clear rebuild cache"
+			},
+			{
+				"command": "purs-lsp-client.clear-cache:export",
+				"title": "Purescript: clear export cache"
+			},
+			{
+				"command": "purs-lsp-client.delete-output",
+				"title": "Purescript: Delete output"
+			},
+			{
+				"command": "purs-lsp-client.index-fast",
+				"title": "Purescript: Index existing externs"
+			},
+			{
+				"command": "purs-lsp-client.index-full",
+				"title": "Purescript: Index externs with full rebuild"
+			}
+		],
+		"configuration": {
+			"title": "Purescript LSP Client",
+			"properties": {
+				"purs-lsp-client.formatter": {
+					"scope": "resource",
+					"type": "string",
+					"enum": [
+						"none",
+						"purty",
+						"purs-tidy",
+						"pose"
+					],
+					"markdownEnumDescriptions": [
+						"No formatting provision",
+						"Use purty. Must be installed - [instructions](https://gitlab.com/joneshf/purty#npm)",
+						"Use purs-tidy. Must be installed - [instructions](https://github.com/natefaubion/purescript-tidy)",
+						"Use pose (prettier plugin). Must be installed - [instructions](https://pose.rowtype.yoga/)"
+					],
+					"default": "purs-tidy",
+					"description": "Tool to use to for formatting. Must be installed and on PATH (or npm installed with addNpmPath set)"
+				},
+				"purs-lsp-client.outputPath": {
+					"scope": "resource",
+					"type": "string",
+					"default": "./output",
+					"description": "Path to purs output directory"
+				},
+				"purs-lsp-client.globs": {
+					"scope": "resource",
+					"type": "array",
+					"default": [
+						"src/**/*.purs",
+						".spago/**/*.purs"
+					],
+					"description": "Source file globs"
+				},
+				"purs-lsp-client.logLevel": {
+					"scope": "resource",
+					"type": "string",
+					"enum": [
+						"all",
+						"debug",
+						"perf",
+						"info",
+						"warning",
+						"error",
+						"none"
+					],
+					"default": "warning"
+				},
+				"purs-lsp-client.traceValue": {
+					"scope": "resource",
+					"type": "traceValue",
+					"default": null
+				},
+				"purs-lsp-client.maxTypeLength": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Max length of types in autocomplete"
+				},
+				"purs-lsp-client.maxCompletions": {
+					"scope": "resource",
+					"type": "number",
+					"default": 50,
+					"description": "Max number of completions to show"
+				},
+				"purs-lsp-client.maxFilesInCache": {
+					"scope": "resource",
+					"type": "number",
+					"default": 16,
+					"description": "Max number of files to keep in memory cache"
+				}
+			}
+		},
+		"breakpoints": [
+			{
+				"language": "purescript"
+			}
+		]
+	},
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
