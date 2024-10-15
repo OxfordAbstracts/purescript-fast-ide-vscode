@@ -78,7 +78,7 @@
     "configuration": {
       "title": "Purescript LSP Client",
       "properties": {
-        "purescript.formatter": {
+        "purescript-lsp.formatter": {
           "scope": "resource",
           "type": "string",
           "enum": [
@@ -96,13 +96,13 @@
           "default": "purs-tidy",
           "description": "Tool to use to for formatting. Must be installed and on PATH (or npm installed with addNpmPath set)"
         },
-        "purescript.outputPath": {
+        "purescript-lsp.outputPath": {
           "scope": "resource",
           "type": "string",
           "default": "./output",
           "description": "Path to purs output directory"
         },
-        "purescript.globs": {
+        "purescript-lsp.globs": {
           "scope": "resource",
           "type": "array",
           "default": [
@@ -111,7 +111,7 @@
           ],
           "description": "Source file globs"
         },
-        "purescript.logLevel": {
+        "purescript-lsp.logLevel": {
           "scope": "resource",
           "type": "string",
           "enum": [
@@ -125,24 +125,24 @@
           ],
           "default": "warning"
         },
-        "purescript.traceValue": {
+        "purescript-lsp.traceValue": {
           "scope": "resource",
           "type": "traceValue",
           "default": null
         },
-        "purescript.maxTypeLength": {
+        "purescript-lsp.maxTypeLength": {
           "scope": "resource",
           "type": "number",
           "default": 100,
           "description": "Max length of types in autocomplete"
         },
-        "purescript.maxCompletions": {
+        "purescript-lsp.maxCompletions": {
           "scope": "resource",
           "type": "number",
           "default": 50,
           "description": "Max number of completions to show"
         },
-        "purescript.maxFilesInCache": {
+        "purescript-lsp.maxFilesInCache": {
           "scope": "resource",
           "type": "number",
           "default": 16,
