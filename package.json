@@ -19,7 +19,8 @@
     "purescript",
     "purs",
     "ide",
-    "lsp"
+    "lsp",
+    "fast"
   ],
   "activationEvents": [
     "onLanguage:purescript",
