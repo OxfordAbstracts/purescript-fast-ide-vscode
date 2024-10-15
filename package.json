@@ -1,6 +1,6 @@
 {
   "name": "purescript-fast-ide-vscode",
-  "displayName": "purescript-fast-ide-vscode",
+  "displayName": "Purescript fast IDE",
   "description": "A fast vscode ide for purecript, using inbuilt purescript LSP",
   "publisher": "OxfordAbstracts",
   "version": "0.0.2",
