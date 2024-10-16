@@ -47,31 +47,31 @@
     ],
     "commands": [
       {
-        "command": "purescript.build",
+        "command": "purescript-lsp.build",
         "title": "Purescript: Build"
       },
       {
-        "command": "purescript.clear-cache",
+        "command": "purescript-lsp.clear-cache",
         "title": "Purescript: clear all caches"
       },
       {
-        "command": "purescript.clear-cache:rebuild",
+        "command": "purescript-lsp.clear-cache:rebuild",
         "title": "Purescript: clear rebuild cache"
       },
       {
-        "command": "purescript.clear-cache:export",
+        "command": "purescript-lsp.clear-cache:export",
         "title": "Purescript: clear export cache"
       },
       {
-        "command": "purescript.delete-output",
+        "command": "purescript-lsp.delete-output",
         "title": "Purescript: Delete output"
       },
       {
-        "command": "purescript.index-fast",
+        "command": "purescript-lsp.index-fast",
         "title": "Purescript: Index existing externs"
       },
       {
-        "command": "purescript.index-full",
+        "command": "purescript-lsp.index-full",
         "title": "Purescript: Index externs with full rebuild"
       }
     ],
