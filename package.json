@@ -73,6 +73,14 @@
       {
         "command": "purescript-lsp.index-full",
         "title": "Purescript: Index externs with full rebuild"
+      },
+      {
+        "command": "purescript-lsp.create-index-tables",
+        "title": "Purescript: Create index DB tables"
+      },
+      {
+        "command": "purescript-lsp.drop-index-tables",
+        "title": "Purescript: Drop index DB tables"
       }
     ],
     "configuration": {
