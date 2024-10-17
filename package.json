@@ -55,11 +55,11 @@
         "title": "Purescript: clear all caches"
       },
       {
-        "command": "purescript-lsp.clear-cache:rebuild",
+        "command": "purescript-lsp.clear-cache:rebuilds",
         "title": "Purescript: clear rebuild cache"
       },
       {
-        "command": "purescript-lsp.clear-cache:export",
+        "command": "purescript-lsp.clear-cache:exports",
         "title": "Purescript: clear export cache"
       },
       {
