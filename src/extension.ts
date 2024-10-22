@@ -4,16 +4,23 @@ import {
   LanguageClientOptions,
   ServerOptions
 } from 'vscode-languageclient/node';
+import { getSpagoWorkspacePath, updateOutputPath, updateSourceGlobs } from './spago';
+
 let client: LanguageClient;
 
 export async function activate(context: ExtensionContext) {
-  const name = 'purescript';
+  const name = 'purescript-lsp';
+  await updateOutputPath();
   const outputDirectory: string | undefined = workspace.getConfiguration('purescript-lsp').get('outputPath');
+  const useSpago = workspace.getConfiguration('purescript-lsp-client').get('use-spago-output-path') || false;
+
+  const workingDirectory = useSpago ? (await getSpagoWorkspacePath()) : undefined;
   // If the extension is launched in debug mode then the debug server options are used
   // Otherwise the run options are used
   const serverOptions: ServerOptions = {
     command: "purs",
     args: ["lsp", "server",
+      "--directory", workingDirectory || "./",
       "--output-directory", outputDirectory || "./output",
     ],
   };
@@ -86,6 +93,9 @@ export async function activate(context: ExtensionContext) {
 
   // Start the client. This will also launch the server
   await client.start();
+
+  // Update the source globs from spago if necessary. We do this after the client has started as it may be slow
+  await updateSourceGlobs();
 }
 
 export function deactivate(): Thenable<void> | undefined {

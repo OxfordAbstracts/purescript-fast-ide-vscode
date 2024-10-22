@@ -155,6 +155,18 @@
           "type": "number",
           "default": 16,
           "description": "Max number of files to keep in memory cache"
+        },
+        "purescript-lsp-client.use-spago-sources": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true,
+          "description": "Get the sources from spago. If false, will use the globs in purescript-lsp.globs"
+        },
+        "purescript-lsp-client.use-spago-output-path": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true,
+          "description": "Get the output path from spago. If false, will use the outputPath in purescript-lsp.outputPath"
         }
       }
     },
@@ -184,6 +196,7 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "vscode-languageclient": "^9.0.1"
+    "vscode-languageclient": "^9.0.1",
+    "yaml": "^2.6.0"
   }
 }
