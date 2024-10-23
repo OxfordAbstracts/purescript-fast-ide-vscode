@@ -3,7 +3,7 @@
   "displayName": "Purescript fast IDE",
   "description": "A fast IDE for purescript, using inbuilt purescript LSP",
   "publisher": "OxfordAbstracts",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "repository": {
     "type": "git",
     "url": "https://github.com/OxfordAbstracts/purescript-fast-ide-vscode.git"
