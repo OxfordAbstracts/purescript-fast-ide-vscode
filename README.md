@@ -1,6 +1,13 @@
-# purescript-fast-ide-vscode README
+# purescript-fast-ide-vscode
 
-A fast ide for purescript
+This extension is in alpha and will probably have many bugs.
+
+It's goal is to be a fast IDE that is performant on large projects and doesn't consume too much memory. 
+
+If you have a small or medium sized project you will probably be better off using https://github.com/nwolverson/vscode-ide-purescript.
+
+To use this project you will have to install a fork of the purs compiler with LSP support. 
+This can be installed at https://www.npmjs.com/package/@oxfordabstracts/purescript-lsp
 
 ## Features
 
@@ -8,58 +15,8 @@ TODO
 
 ## Requirements
 
-Purescript with lsp binary. https://github.com/OxfordAbstracts/purescript/pull/2
+Purescript with lsp binary. https://www.npmjs.com/package/@oxfordabstracts/purescript-lsp
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+TODO

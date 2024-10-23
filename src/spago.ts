@@ -4,8 +4,8 @@ import { readFile } from "fs/promises";
 import { normalize, join } from "path";
 import { cwd } from "process";
 import { promisify } from "util";
-import { ConfigurationTarget, workspace } from "vscode"
-import { parse } from 'yaml'
+import { ConfigurationTarget, workspace } from "vscode";
+import { parse } from 'yaml';
 
 const execP = promisify(exec);
 
@@ -27,7 +27,7 @@ export const getCurrentDir = (): string | undefined => {
   }
   const workspaceFolder = workspaceFolders[0];
   return workspaceFolder.uri.fsPath;
-}
+};
 
 const pTrue = () => Promise.resolve(true);
 
@@ -44,7 +44,7 @@ const getSpagoPath = async (path: string, pred: (x: any) => Promise<boolean> = p
     }
   }
   return getSpagoPath(`${path}/..`, pred, depth - 1);
-}
+};
 
 const hasWorkspace = async (spagoPath: string): Promise<boolean> => {
   const spago = await readSpagoYaml(spagoPath);
@@ -119,4 +119,4 @@ export const updateSourceGlobs = async (): Promise<undefined> => {
     workspace.getConfiguration('purescript-lsp').update('globs', JSON.parse(sources), ConfigurationTarget.Workspace);
   }
 
-}
+};
