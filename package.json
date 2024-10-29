@@ -156,6 +156,12 @@
           "default": 16,
           "description": "Max number of files to keep in memory cache"
         },
+        "purescript-lsp.inferExpressions": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to infer value types on hover. In large modules this can be slow"
+        },
         "purescript-lsp-client.use-spago-sources": {
           "scope": "resource",
           "type": "boolean",
