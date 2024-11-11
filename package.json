@@ -81,6 +81,10 @@
       {
         "command": "purescript-lsp.drop-index-tables",
         "title": "Purescript: Drop index DB tables"
+      },
+      {
+        "command": "purescript-lsp.debug-cache-size",
+        "title": "Purescript: Print cache sizes"
       }
     ],
     "configuration": {

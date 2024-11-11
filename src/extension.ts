@@ -90,6 +90,9 @@ export async function activate(context: ExtensionContext) {
   context.subscriptions.push(commands.registerCommand('purescript-lsp.drop-index-tables', () => {
     client.sendRequest('drop-index-tables');
   }));
+  context.subscriptions.push(commands.registerCommand('purescript-lsp.debug-cache-size', () => {
+    client.sendRequest('debug-cache-size');
+  }));
 
   // Start the client. This will also launch the server
   await client.start();
