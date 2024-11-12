@@ -166,6 +166,18 @@
           "default": true,
           "description": "Whether to infer value types on hover. In large modules this can be slow"
         },
+        "purescript-lsp.showDiagnosticsFilepath": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false,
+          "description": "Whether to show filepath in diagnostics"
+        },
+        "purescript-lsp.showDiagnosticsModule": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false,
+          "description": "Whether to show module in diagnostics"
+        },
         "purescript-lsp-client.use-spago-sources": {
           "scope": "resource",
           "type": "boolean",
