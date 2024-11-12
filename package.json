@@ -85,6 +85,10 @@
       {
         "command": "purescript-lsp.debug-cache-size",
         "title": "Purescript: Print cache sizes"
+      },
+      {
+        "command": "purescript-lsp.debug-cache-size-evaluated",
+        "title": "Purescript: Print cache sizes, forcing evaluation"
       }
     ],
     "configuration": {
