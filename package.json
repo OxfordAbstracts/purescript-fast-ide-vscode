@@ -99,15 +99,13 @@
           "type": "string",
           "enum": [
             "none",
-            "purty",
             "purs-tidy",
-            "pose"
+            "purs-tidy-format-in-place"
           ],
           "markdownEnumDescriptions": [
             "No formatting provision",
-            "Use purty. Must be installed - [instructions](https://gitlab.com/joneshf/purty#npm)",
             "Use purs-tidy. Must be installed - [instructions](https://github.com/natefaubion/purescript-tidy)",
-            "Use pose (prettier plugin). Must be installed - [instructions](https://pose.rowtype.yoga/)"
+            "Use purs-tidy with format-in-place command. This may cause unsaved changes to be overwritten"
           ],
           "default": "purs-tidy",
           "description": "Tool to use to for formatting. Must be installed and on PATH (or npm installed with addNpmPath set)"
